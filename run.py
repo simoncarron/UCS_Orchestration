@@ -7,11 +7,11 @@ if __name__ == "__main__":
 
 print "test"
 
-print "test2"
+print "SSD"
 
 print "dfdfdff"
 
-
+print "sdsdsdsdd"
 app.run(
 
     	debug=config.DEBUG,
