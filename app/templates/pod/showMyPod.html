@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block container %}
+
+{% if pod != None %}
+<script>
+var lastInput = "";
+var lastInputHTML = "";
+
+$(document).ready(function(){
+   var j = jQuery.noConflict();
+   var clear = false;
+   j("#step").hide();
+
+	j(document).ready(function()
+	{
+		j(".refreshMe").everyTime(500,function(i){
+			j.ajax({
+			  method: "POST",
+			  data: "s={{pod.pkID}}",
+			  url: "/status",
+			  cache: false,
+			  success: function(html){
+                  if(window.lastInput != html['description']){
+                        switch((html['status'])) {
+                            case "FINA_Success to push it":
+                                j("#step").html('<div class="panel-body">'+html['description']+'<div><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div></div>');
+                                break;
+
+                            case "Null":
+                                break;
+
+                            default:
+                                j("#step").html('<div class="panel-body">'+html['description']+'<div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%"><span class="sr-only">45% Complete</span></div></div></div>').fadeIn("slow");
+                        }
+                        window.lastInput = html['description'];
+                        }
+                  }
+			})
+		})
+	});
+});
+
+
+
+
+
+
+</script>
+
+
+
+<!-- Validation Message -->
+<div class="modal fade" id="deployPod" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deployPodLabel">Deploy POD</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure that you want to deploy your POD?
+            </div>
+            <div class="modal-footer">
+                <form action="run" method="GET">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Deploy</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="step" class="well refreshMe">
+    <div class="panel-body">
+    </div>
+</div>
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#deployPod">
+    <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Deploy POD
+</button>
+{% else %}
+<div class="alert alert-warning" role="alert">No POD is assigned to your profile.</div>
+{% endif %}
+
+
+{% endblock %}

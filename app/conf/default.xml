@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+    <vm min="1" max="3" scope="user">
+        <sub name="Product">
+            <element type="radio" editable="yes" empty="no">
+                <name>product</name>
+                <display_name>Product</display_name>
+                <message>Please select a Product.</message>
+                <value name="Cisco Unified Communications Manager"/>
+                <value name="Cisco Unity Connection"/>
+                <value name="Cisco Unified Communications Manager IM &amp; Presence "/>
+            </element>
+        </sub>
+        <sub name="Network Information">
+            <element type="text" editable="yes" empty="no">
+                <name>name</name>
+                <display_name>Host Name</display_name>
+                <regex>^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$</regex>
+                <message>The host name can comprise up to 63 characters and can contain alphanumeric characters and hyphens. It must start with an alphabetic character.</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>ip_address</name>
+                <display_name>IP Address</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the IP address in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>ip_mask</name>
+                <display_name>IP Mask</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the IP mask in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>ip_gateway_address</name>
+                <display_name>IP Gateway Adress</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the gateway address in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+        </sub>
+        <sub name="DNS">
+            <element type="text" editable="yes" empty="no">
+                <name>primary_dns</name>
+                <display_name>Primary DNS</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the Primary DNS in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="yes">
+                <name>secondary_dns</name>
+                <display_name>Secondary DNS (optional)</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the Secondary DNS in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>domain</name>
+                <display_name>Domain</display_name>
+                <regex>^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$</regex>
+                <message>The Domain Name provides the name of the Domain in which this node is located.</message>
+            </element>
+        </sub>
+        <sub name="Network Time Protocol">
+            <element type="radio" editable="yes" empty="no">
+                <name>region</name>
+                <display_name>Europe</display_name>
+                <message>This field lets you select a region for your time zone.</message>
+                <value name="Europe"/>
+            </element>
+            <element type="radio" editable="yes" empty="no">
+                <name>time_zone</name>
+                <display_name>Time Zone</display_name>
+                <message>This mandatory field specifies the time zone in which the node is located. Time Zone comprises a list of time zones for the selected region.</message>
+                <value name="Europe/Zurich"/>
+                <value name="Europe/Paris"/>
+            </element>
+        </sub>
+        <sub name="UCS">
+            <element type="reference" editable="yes" empty="no">
+                <name>ucs</name>
+                <display_name>UCS</display_name>
+                <message>Please enter a UCS</message>
+                <refer>ucs</refer>
+            </element>
+        </sub>
+    </vm>
+    <ucs min="2" max="3" scope="user">
+        <sub name="Information">
+            <element type="text" editable="yes" empty="yes">
+                <name>name</name>
+                <display_name>Host Name</display_name>
+                <regex>^[A-Za-z]+$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="radio" editable="yes" empty="no">
+                <name>os</name>
+                <display_name>OSMANU</display_name>
+                <message>No possible</message>
+                <value name="ESXi 5.5"/>
+                <value name="ESXi 6.0"/>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>ip_address</name>
+                <display_name>IP Address</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the IP address in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>ip_mask</name>
+                <display_name>IP Mask</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the IP mask in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>ip_gateway_address</name>
+                <display_name>IP Gateway Adress</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the gateway address in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+        </sub>
+        <sub name="Cisco Integrated Management Controller">
+            <element type="text" editable="yes" empty="no">
+                <name>cimc_ip_address</name>
+                <display_name>IP Address</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the IP address in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>cimc_ip_mask</name>
+                <display_name>IP Mask</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the IP mask in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>cicm_ip_gateway_address</name>
+                <display_name>IP Gateway Adress</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>You must enter the gateway address in the format ddd.ddd.ddd.ddd where ddd can have a value between 0 and 255 (except 0.0.0.0).</message>
+            </element>
+        </sub>
+    </ucs>
+    <user min="1" max="10" scope="global">
+        <sub>
+            <element type="text" editable="yes" empty="yes">
+                <name>name</name>
+                <display_name>Name</display_name>
+                <regex>^[A-Za-z]+$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>first_name</name>
+                <display_name>First Name</display_name>
+                <regex>^[1-9]+$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>userid</name>
+                <display_name>User ID</display_name>
+                <regex>^[A-Za-z]+$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>password</name>
+                <display_name>Password</display_name>
+                <regex>^[A-Za-z]+$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="radio" editable="yes" empty="no">
+                <name>access_group</name>
+                <display_name>Access Group</display_name>
+                <message>No possible</message>
+                <value name="A"/>
+                <value name="B"/>
+                <value name="C"/>
+                <value name="D"/>
+            </element>
+            <element type="reference" editable="yes" empty="yes">
+                <name>pod</name>
+                <display_name>Pod</display_name>
+                <message>Please enter a Pod</message>
+                <refer>pod</refer>
+            </element>
+        </sub>
+    </user>
+    <pod min="1" max="10" scope="global">
+        <sub name="Informations">
+            <element type="text" editable="yes" empty="yes">
+                <name>name</name>
+                <display_name>Name</display_name>
+                <regex>[a-zA-Z\d]+$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="text" editable="yes" empty="no">
+                <name>management_ip_address</name>
+                <display_name>Management IP Address</display_name>
+                <regex>^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="text" editable="no" empty="no">
+                <name>status</name>
+            </element>
+        </sub>
+        <sub name="Credential">
+            <element type="text" editable="yes" empty="yes">
+                <name>username</name>
+                <display_name>Username</display_name>
+                <regex>[a-zA-Z\d]+$</regex>
+                <message>No possible</message>
+            </element>
+            <element type="text" editable="yes" empty="yes">
+                <name>password</name>
+                <display_name>Password</display_name>
+                <regex>[a-zA-Z\d]+$</regex>
+                <message>No possible</message>
+            </element>
+        </sub>
+    </pod>
+</data>

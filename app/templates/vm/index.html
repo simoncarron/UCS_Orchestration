@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block action %}
+<div class="page-header">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true">Actions
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            {% if reach_max_entries %}
+            <li class="disabled"><a>Add VM</a></li>
+            {% else %}
+            <li><a href="/addVmForm">Add VM</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block alert %}
+{% if not reach_min_entries %}
+<div class="alert alert-danger" role="alert">At least {{min_entries}} site(s) has to be configured!</div>
+{% endif %}
+{% endblock %}
+
+{% block container %}
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+
+    {% for entriy2 in entries %}
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading{{entriy2[1].data[0].value}}{{loop.index}}">
+            <h4 class="panel-title">
+                <a {% if not loop.first %}class="collapsed" {% endif %} role="button" data-toggle="collapse"
+                   data-parent="#accordion" href="#collapse{{entriy2[1].data[0].value}}{{loop.index}}"
+                   aria-expanded="false"
+                   aria-controls="collapse{{entriy2[1].data[0].value}}{{loop.index}}">
+                    {{entriy2[1].data[0].value}}
+                    <div class="pull-right"><span class="label label-default">{{entriy2[0].data[0].value}}</span></div>
+                </a>
+            </h4>
+        </div>
+
+        <div id="collapse{{entriy2[1].data[0].value}}{{loop.index}}" class="panel-collapse collapse" role="tabpanel"
+             aria-labelledby="heading{{entriy2[1].data[0].value}}{{loop.index}}">
+            <div class="panel-body">
+
+                <table class="table table-hover">
+                    {% for a in entriy2 %}
+                    <tr>
+                        <td><h3>{{a.name}}</h3></td>
+                        <td></td>
+                    </tr>
+
+
+                    {% for b in a.data %}
+
+                    <tr>
+                        <td>{{b.display_name}}</td>
+                        <td>{{b.value}}</td>
+                    </tr>
+
+                    {% endfor %}
+                    {% endfor %}
+                </table>
+
+                <!-- Delete Button -->
+                <button type="button" class="btn btn-default" data-toggle="modal"
+                        data-target="#myModal{{entriy2[1].data[0].pkID}}">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </button>
+
+                <!-- Modify Button -->
+
+                <form action="modifyVmForm" method="post">
+                    <input type="hidden" name="pkID" value="{{entriy2[1].data[0].pkID}}">
+                    <button type="submit" class="glyphicon glyphicon-pencil btn btn-default"></button>
+                </form>
+
+
+                <!-- Validation Message -->
+                <div class="modal fade" id="myModal{{entriy2[1].data[0].pkID}}" tabindex="-1" role="dialog"
+                     aria-labelledby="myModalLabel{{entriy2[1].data[0].pkID}}">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel{{entriy2[1].data[0].pkID}}">Delete VM</h4>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure that you want to delete this VM?
+                            </div>
+                            <div class="modal-footer">
+                                <form action="deleteVm" method="POST">
+                                    <input type="hidden" name="pkID" value="{{entriy2[1].data[0].pkID}}">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+

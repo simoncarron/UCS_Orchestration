@@ -1,0 +1,31 @@
+@font-face{
+	font-family:'TheSaB3';
+	url('https://www.res2.scsstatic.ch/etc/designs/base/resources/fonts/TheSaB3_.woff') format('woff')
+	}
+
+@font-face{
+	font-family:'TheSaB5';
+	src:url('https://www.res2.scsstatic.ch/etc/designs/base/resources/fonts/TheSaB5_.woff') format('woff')
+	}
+
+@font-face{
+	font-family:'TheSerifB3';
+	src:url('https://www.res2.scsstatic.ch/etc/designs/base/resources/fonts/theserifb-w3light-webfont.woff') format('woff')
+}
+
+h4{
+	font-family: "TheSerifB3","Times New Roman",Georgia;
+    font-size: 15px;
+    color: #666 !important
+}
+
+h1{
+    font: 36px TheSaB3,'Trebuchet MS',Arial,Helvetica,sans-serif;
+}
+body {
+    font: 13px/16px TheSaB5,'Trebuchet MS',Arial,Helvetica,sans-serif;
+    color: #001155;
+}
+p{
+    font: 13px TheSaB5,'Trebuchet MS',Arial,Helvetica,sans-serif;
+}

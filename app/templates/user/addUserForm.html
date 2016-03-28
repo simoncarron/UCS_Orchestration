@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+{% block container %}
+
+<style type="text/css">
+    #regexpForm .btn-group .form-control-feedback {
+    top: 0;
+    right: -30px;
+    }
+</style>
+
+<script>
+$(document).ready(function() {
+   $('#regexpForm').formValidation({
+      framework: 'bootstrap',
+         err: {
+            container: 'tooltip'
+         },
+         icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+         },
+         fields: {
+
+
+
+{% for element in inputform %}
+
+// *********** Text Input ****************
+   {% if  element.type=="text" %}
+         {{element.name|e}}: {
+            validators: {
+      {% if element.empty == "no" %}
+               notEmpty: {
+                  message: '{{element.message|e}}'
+               },
+      {% endif %}
+               regexp: {
+                  regexp: /{{element.regex|e}}/,
+                  message: '{{element.message|e}}'
+               }
+            }
+         }{% if not loop.last %},{% endif %}
+   {% endif %}
+// ********** Text Input END***************
+
+// *********** Reference Input ****************
+   {% if  element.type=="radio" %}
+         {{element.name|e}}: {
+            validators: {
+      {% if element.empty == "no" %}
+               notEmpty: {
+                  message: '{{element.message|e}}'
+               },
+      {% endif %}
+            }
+         }{% if not loop.last %},{% endif %}
+   {% endif %}
+// ********** Reference Input END ***************
+
+// *********** Reference Reference ****************
+   {% if  element.type=="reference" %}
+         {{element.name|e}}: {
+            validators: {
+      {% if element.empty == "no" %}
+               notEmpty: {
+                  message: '{{element.message|e}}'
+               },
+      {% endif %}
+            }
+         }{% if not loop.last %},{% endif %}
+   {% endif %}
+// ********** Reference Reference END ***************
+
+
+{% endfor %}
+      }
+   });
+});
+
+
+</script>
+
+<form id="regexpForm" class="form-horizontal" action="addUser" method="post">
+    <input type="hidden" name="table" value="{{table}}">
+    {% for element in inputform %}
+
+    {# *********** Text Input ****************#}
+    {% if element.type=="text" %}
+    <div class="form-group">
+        <label class="col-xs-3 control-label">{{element.display_name|e}}</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="{{element.name|e}}"/>
+        </div>
+    </div>
+    {% endif %}
+    {# ********** Text Input END **************#}
+
+    {# *********** Radio Input ****************#}
+    {% if element.type=="radio" %}
+    <div class="form-group">
+        <label class="col-xs-3 control-label">{{element.display_name|e}}</label>
+        <div class="col-xs-9">
+            <div class="btn-group" data-toggle="buttons">
+                {% for sub in element.content %}
+                <label class="btn btn-default">
+                    <input type="radio" name="{{element.name|e}}" value="{{sub}}"/> {{sub}}
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {# ********* Radio Input END **************#}
+
+
+    {# *********** Reference Input ****************#}
+    {% if element.type=="reference" %}
+    <div class="form-group">
+        <label class="col-xs-3 control-label">{{element.display_name|e}}</label>
+        <div class="col-xs-9">
+            <div class="btn-group" data-toggle="buttons">
+                <select class="form-control" name="{{element.name|e}}">
+                            <option value=""></option>
+                    {% for sub in element.content %}
+                            <option value="{{sub.pkey}}">{{sub.value}}</option>
+                    {% endfor %}
+                </select>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {# ********** Reference Input END **************#}
+
+    {% endfor %}
+
+    <div class="form-group">
+        <div class="col-xs-6 col-xs-offset-2">
+            <button type="submit" class="btn btn-default">Add</button>
+        </div>
+    </div>
+
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% macro head(title) %} 
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link rel="icon" href="../../favicon.ico">
+
+   <title>{{title}}</title>
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+
+   <!-- FormValidation CSS file -->
+   <link rel="stylesheet" href="{{ url_for('static', filename='vendor/formvalidation/dist/css/formValidation.min.css') }}">
+
+   <!-- Custom styles -->
+   <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+
+   <!-- jQuery JS-->
+   <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+
+   <!-- jQuery Timers JS-->
+   <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.timers-1.0.0.js') }}"></script>
+
+   <!-- Bootstrap JS -->
+   <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+   <!-- FormValidation JS -->
+   <script src="{{ url_for('static', filename='vendor/formvalidation/dist/js/formValidation.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='vendor/formvalidation/dist/js/framework/bootstrap.min.js') }}"></script>
+{% endmacro %}
+
+
+

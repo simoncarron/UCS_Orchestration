@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+{% block container %}
+
+<style type="text/css">
+    #regexpForm .btn-group .form-control-feedback {
+    top: 0;
+    right: -30px;
+    }
+</style>
+
+<script>
+$(document).ready(function() {
+   $('#regexpForm').formValidation({
+      framework: 'bootstrap',
+         err: {
+            container: 'tooltip'
+         },
+         icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+         },
+         fields: {
+
+{% for element2 in inputform %}
+    {% if not loop.last %}
+        {% for element in element2.data %}
+
+            // *********** Text Input ****************
+                   {% if  element.type=="text" %}
+                         {{element.name|e}}: {
+                            validators: {
+                      {% if element.empty == "no" %}
+                               notEmpty: {
+                                  message: '{{element.message|e}}'
+                               },
+                      {% endif %}
+                               regexp: {
+                                  regexp: /{{element.regex|e}}/,
+                                  message: '{{element.message|e}}'
+                               }
+                            }
+                         },
+                   {% endif %}
+            // ********** Text Input END***************
+
+            // *********** Radio Input ****************
+               {% if  element.type=="radio" %}
+                     {{element.name|e}}: {
+                        validators: {
+                  {% if element.empty == "no" %}
+                           notEmpty: {
+                              message: '{{element.message|e}}'
+                           }
+                  {% endif %}
+                        }
+                     },
+               {% endif %}
+            // ********** Radio Input END ***************
+
+            // *********** Reference Reference ****************
+               {% if  element.type=="reference" %}
+                     {{element.name|e}}: {
+                        validators: {
+                  {% if element.empty == "no" %}
+                           notEmpty: {
+                              message: '{{element.message|e}}'
+                           }
+                  {% endif %}
+                        }
+                     },
+               {% endif %}
+            // ********** Reference Reference END ***************
+
+
+        {% endfor %}
+    {% endif %}
+    {% if loop.last %}
+        {% for element in element2.data %}
+
+             // *********** Text Input ****************
+                   {% if  element.type=="text" %}
+                         {{element.name|e}}: {
+                            validators: {
+                      {% if element.empty == "no" %}
+                               notEmpty: {
+                                  message: '{{element.message|e}}'
+                               },
+                      {% endif %}
+                               regexp: {
+                                  regexp: /{{element.regex|e}}/,
+                                  message: '{{element.message|e}}'
+                               }
+                            }
+                         }{% if not loop.last %},{% endif %}
+                   {% endif %}
+            // ********** Text Input END***************
+
+            // *********** Radio Input ****************
+               {% if  element.type=="radio" %}
+                     {{element.name|e}}: {
+                        validators: {
+                  {% if element.empty == "no" %}
+                           notEmpty: {
+                              message: '{{element.message|e}}'
+                           }
+                  {% endif %}
+                        }
+                     }{% if not loop.last %},{% endif %}
+               {% endif %}
+            // ********** Radio Input END ***************
+
+            // *********** Reference Reference ****************
+               {% if  element.type=="reference" %}
+                     {{element.name|e}}: {
+                        validators: {
+                  {% if element.empty == "no" %}
+                           notEmpty: {
+                              message: '{{element.message|e}}'
+                           }
+                  {% endif %}
+                        }
+                     }{% if not loop.last %},{% endif %}
+               {% endif %}
+            // ********** Reference Reference END ***************
+
+
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+      }
+   });
+});
+
+
+
+
+
+</script>
+
+<form id="regexpForm" class="form-horizontal" action="updateUser" method="post">
+   <input type="hidden" name="table" value="{{table}}">
+   <input type="hidden" name="pkID" value="{{pkID}}">
+    {% for element2 in inputform %}
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h4>{{element2.name}}</h4></div>
+        <div class="panel-body">
+
+            {% for element in element2.data %}
+
+            {# *********** Text Input ****************#}
+            {% if element.type=="text" %}
+            <div class="form-group">
+                <label class="col-xs-3 control-label">{{element.display_name|e}}</label>
+                <div class="col-xs-5">
+                    <input type="text" class="form-control" name="{{element.name|e}}" value="{{element.value|e}}"/>
+                </div>
+            </div>
+            {% endif %}
+            {# ********** Text Input END **************#}
+
+            {# *********** Radio Input ****************#}
+            {% if element.type=="radio" %}
+            <div class="form-group">
+                <label class="col-xs-3 control-label">{{element.display_name|e}}</label>
+                <div class="col-xs-9">
+                    <div class="btn-group" data-toggle="buttons">
+                        {% for sub in element.content %}
+                        <label class="btn btn-default {%if sub in element.value%}active{%endif%}">
+                            <input type="radio" name="{{element.name|e}}" value="{{sub}}" {%if sub in element.value%}checked="checked"{%endif%}/> {{sub}}
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {# ********* Radio Input END **************#}
+
+
+ {# *********** Reference Input ****************#}
+    {% if element.type=="reference" %}
+    <div class="form-group">
+        <label class="col-xs-3 control-label">{{element.display_name|e}}</label>
+        <div class="col-xs-9">
+            <div class="btn-group" data-toggle="buttons">
+                <select class="form-control" name="fkID_{{element.name|e}}">
+                    <option value=""></option>
+                    {% for sub in element.content %}
+                    <option value="{{sub.pkey}}" {%if sub.pkey|string() in element.value|string()%}Selected {%endif%}>{{sub.value}}</option>
+                    {% endfor %}
+                </select>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {# ********** Reference Input END **************#}
+
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+    {% endfor %}
+    <div class="form-group">
+        <div class="col-xs-6 col-xs-offset-2">
+            <button type="submit" class="btn btn-default">Update</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

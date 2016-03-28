@@ -1,0 +1,51 @@
+{% macro navigator(menu) %}
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="/../../static/images/swisscom_logo.png" height="27" width="auto">
+                </a>
+                <li><a href="/">Home</a></li>
+                {% if session.access_group in "B"%}
+                <li><a href="/showUcs">UCS</a></li>
+                <li><a href="/showVm">VM</a></li>
+                {% endif %}
+                {% if session.access_group in "A"%}
+                <li><a href="/showPod">Pod</a></li>
+                <li><a href="/showUser">User</a></li>
+                {% endif %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">{{session.user}}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="signOut">Sign Out</a></li>
+                        {% if session.access_group in "B"%}
+                        <li role="separator" class="divider"></li>
+                        <li><a href="showMyPod">Pod</a></li>
+                        {% endif %}
+
+
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+{% endmacro %}
+
+
+

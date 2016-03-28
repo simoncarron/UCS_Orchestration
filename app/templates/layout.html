@@ -1,0 +1,28 @@
+{% from "macro/navigator.html" import navigator with context %}
+{% from "macro/head.html" import head with context %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+  {{ head(location) }}
+
+  </head>
+  <body>
+
+  {% block navigator %}
+     {{ navigator() }}
+  {% endblock %}
+
+     <div class="container">
+        <div class="page-header">
+           <h1>{{title}}</h1>
+        </div>
+
+     {% block action %}{% endblock %}
+     {% block alert %}{% endblock %}
+     {% block container %}{% endblock %}
+ 
+     </div> <!-- /container -->
+  </body>
+</html>
