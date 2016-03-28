@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<ClusterData>
+  <Version>11.0.1</Version>
+  <Publisher>
+    <Hostname>
+      <ParamNameText>Host Name for this machine</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>simonhostname</ParamValue>
+    </Hostname>
+    <IpAddress>
+      <ParamNameText>Node Ip Address</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>192.168.1.1</ParamValue>
+    </IpAddress>
+    <Role>
+      <ParamNameText>Node role</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>1</ParamValue>
+    </Role>
+    <Usage>
+      <ParamNameText>Node usage</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>0</ParamValue>
+    </Usage>
+  </Publisher>
+  <Subscriber>
+    <Hostname>
+      <ParamNameText>Host Name for this machine</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>cucm02</ParamValue>
+    </Hostname>
+    <IpAddress>
+      <ParamNameText>Node Ip Address</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>192.168.5.1</ParamValue>
+    </IpAddress>
+    <Role>
+      <ParamNameText>Node role</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>1</ParamValue>
+    </Role>
+    <Usage>
+      <ParamNameText>Node usage</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>1</ParamValue>
+    </Usage>
+  </Subscriber>
+  <Subscriber>
+    <Hostname>
+      <ParamNameText>Host Name for this machine</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>cucm03</ParamValue>
+    </Hostname>
+    <IpAddress>
+      <ParamNameText>Node Ip Address</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>192.168.6.1</ParamValue>
+    </IpAddress>
+    <Role>
+      <ParamNameText>Node role</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>1</ParamValue>
+    </Role>
+    <Usage>
+      <ParamNameText>Node usage</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>1</ParamValue>
+    </Usage>
+  </Subscriber>
+  <Subscriber>
+    <Hostname>
+      <ParamNameText>Host Name for this machine</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>cucm04</ParamValue>
+    </Hostname>
+    <IpAddress>
+      <ParamNameText>Node Ip Address</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>192.168.7.1</ParamValue>
+    </IpAddress>
+    <Role>
+      <ParamNameText>Node role</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>1</ParamValue>
+    </Role>
+    <Usage>
+      <ParamNameText>Node usage</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>1</ParamValue>
+    </Usage>
+  </Subscriber>
+</ClusterData>

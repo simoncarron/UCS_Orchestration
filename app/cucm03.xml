@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<PlatformData>
+  <Version>11.0.1</Version>
+  <ProductDeployment>
+    <ParamNameText>Deployment</ParamNameText>
+    <ParamDefaultValue>CallManager</ParamDefaultValue>
+    <ParamValue>callmanager</ParamValue>
+  </ProductDeployment>
+  <PlatformConfigurationDone>
+    <ParamNameText>Status of platform configuration</ParamNameText>
+    <ParamDefaultValue>no</ParamDefaultValue>
+    <ParamValue>no</ParamValue>
+  </PlatformConfigurationDone>
+  <PreLoadedSoftware>
+    <ParamNameText>Create a pre loaded software node</ParamNameText>
+    <ParamDefaultValue>no</ParamDefaultValue>
+    <ParamValue>yes</ParamValue>
+  </PreLoadedSoftware>
+  <InstallType>
+    <ParamNameText>Install or upgrade type</ParamNameText>
+    <ParamDefaultValue>basic</ParamDefaultValue>
+    <ParamValue>Basic Install</ParamValue>
+  </InstallType>
+  <LocalHostNICAuto>
+    <ParamNameText>Auto Configure speed and duplex</ParamNameText>
+    <ParamDefaultValue>yes</ParamDefaultValue>
+    <ParamValue>yes</ParamValue>
+  </LocalHostNICAuto>
+  <LocalHostName>
+    <ParamNameText>Host Name for this machine</ParamNameText>
+    <ParamDefaultValue>localhost</ParamDefaultValue>
+    <ParamValue>cucm03</ParamValue>
+  </LocalHostName>
+  <LocalHostDHCP>
+    <ParamNameText>Is DHCP enabled for this machine</ParamNameText>
+    <ParamDefaultValue>no</ParamDefaultValue>
+    <ParamValue>no</ParamValue>
+  </LocalHostDHCP>
+  <LocalHostIP0>
+    <ParamNameText>Host IP0 addr for this node</ParamNameText>
+    <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
+    <ParamValue>192.168.6.1</ParamValue>
+  </LocalHostIP0>
+  <LocalHostMask0>
+    <ParamNameText>Host IP0 mask for this node</ParamNameText>
+    <ParamDefaultValue>255.255.255.0</ParamDefaultValue>
+    <ParamValue>255.255.255.0</ParamValue>
+  </LocalHostMask0>
+  <LocalHostGW0>
+    <ParamNameText>Gateway for this node</ParamNameText>
+    <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
+    <ParamValue>192.168.6.3</ParamValue>
+  </LocalHostGW0>
+  <LocalHostTimezone>
+    <ParamNameText>Timezone for this node</ParamNameText>
+    <ParamDefaultValue>America/Los_Angeles</ParamDefaultValue>
+    <ParamValue>Europe/Brussels</ParamValue>
+  </LocalHostTimezone>
+  <LocalHostContinent>
+    <ParamNameText>Continent for this node</ParamNameText>
+    <ParamDefaultValue>America</ParamDefaultValue>
+    <ParamValue>Europe</ParamValue>
+  </LocalHostContinent>
+  <LocalHostCity>
+    <ParamNameText>City for this node</ParamNameText>
+    <ParamDefaultValue>Los_Angeles</ParamDefaultValue>
+    <ParamValue>Brussels</ParamValue>
+  </LocalHostCity>
+  <LocalHostAdminName>
+    <ParamNameText>Administrator name for this node</ParamNameText>
+    <ParamDefaultValue>administrator</ParamDefaultValue>
+    <ParamValue>ccmadmin</ParamValue>
+  </LocalHostAdminName>
+  <LocalHostAdminPwCrypt>
+    <ParamNameText>Admin PW for this node</ParamNameText>
+    <ParamDefaultValue>password</ParamDefaultValue>
+    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+  </LocalHostAdminPwCrypt>
+  <CertX509>
+    <Org>
+      <ParamNameText>Certification Signing Request Organization</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>Simon_Organization</ParamValue>
+    </Org>
+    <Unit>
+      <ParamNameText>Certification Signing Request Unit</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>Simon_Unit</ParamValue>
+    </Unit>
+    <Location>
+      <ParamNameText>Certification Signing Request Location</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>Simon_Location</ParamValue>
+    </Location>
+    <State>
+      <ParamNameText>Certification Signing Request State</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>Simon_State</ParamValue>
+    </State>
+    <Country>
+      <ParamNameText>Certification Signing Request Country</ParamNameText>
+      <ParamDefaultValue>none</ParamDefaultValue>
+      <ParamValue>CH</ParamValue>
+    </Country>
+  </CertX509>
+  <LocaleId>
+    <ParamNameText>Microsoft assigned locale identifier value</ParamNameText>
+    <ParamDefaultValue>00000409</ParamDefaultValue>
+    <ParamValue/>
+  </LocaleId>
+  <CCMVersion>
+    <ParamNameText>CM version on the server backed up</ParamNameText>
+    <ParamDefaultValue>CCM ver 5.0</ParamDefaultValue>
+    <ParamValue/>
+  </CCMVersion>
+  <CcmFirstNode>
+    <ParamNameText>First CCM node in the cluster</ParamNameText>
+    <ParamDefaultValue>yes</ParamDefaultValue>
+    <ParamValue>no</ParamValue>
+  </CcmFirstNode>
+  <CallHomeDisable>
+    <ParamNameText>This tag will be present when SCH and ACH is disabled by the user</ParamNameText>
+    <ParamDefaultValue>Disable</ParamDefaultValue>
+    <ParamValue>Disabled</ParamValue>
+  </CallHomeDisable>
+  <SftpPwCrypt>
+    <ParamNameText>Security PW for this node</ParamNameText>
+    <ParamDefaultValue>password</ParamDefaultValue>
+    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+  </SftpPwCrypt>
+  <IPSecFirstNode>
+    <ParamNameText>First IPSec node in the cluster</ParamNameText>
+    <ParamDefaultValue>yes</ParamDefaultValue>
+    <ParamValue>no</ParamValue>
+  </IPSecFirstNode>
+  <IPSecEnabled>
+    <ParamNameText>IPSec Configuration for this node</ParamNameText>
+    <ParamDefaultValue>no</ParamDefaultValue>
+    <ParamValue>no</ParamValue>
+  </IPSecEnabled>
+  <IPSecSecurityPwCrypt>
+    <ParamNameText>Security PW for this node</ParamNameText>
+    <ParamDefaultValue>password</ParamDefaultValue>
+    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+  </IPSecSecurityPwCrypt>
+  <CcmDBHost>
+    <ParamNameText>Host Name for DataBase</ParamNameText>
+    <ParamDefaultValue>none</ParamDefaultValue>
+    <ParamValue>simonhostname</ParamValue>
+  </CcmDBHost>
+  <CcmDBIpAddr>
+    <ParamNameText>Host IP Addr for DataBase</ParamNameText>
+    <ParamDefaultValue>none</ParamDefaultValue>
+    <ParamValue>192.168.1.1</ParamValue>
+  </CcmDBIpAddr>
+  <IPSecMasterHost>
+    <ParamNameText>Host name for IPSec</ParamNameText>
+    <ParamDefaultValue>none</ParamDefaultValue>
+    <ParamValue>simonhostname</ParamValue>
+  </IPSecMasterHost>
+  <IPSecMasterIpAddr>
+    <ParamNameText>Host IP Addr for IPSec</ParamNameText>
+    <ParamDefaultValue>none</ParamDefaultValue>
+    <ParamValue>192.168.1.1</ParamValue>
+  </IPSecMasterIpAddr>
+  <NTPServerHost>
+    <ParamNameText>Cluster NTP Server Host name</ParamNameText>
+    <ParamDefaultValue>none</ParamDefaultValue>
+    <ParamValue>simonhostname</ParamValue>
+  </NTPServerHost>
+  <NTPServerIpAddr>
+    <ParamNameText>Cluster NTP Server Host IP Addr</ParamNameText>
+    <ParamDefaultValue>none</ParamDefaultValue>
+    <ParamValue>192.168.1.1</ParamValue>
+  </NTPServerIpAddr>
+  <ApplUserUsername>
+    <ParamNameText>Application User Username</ParamNameText>
+    <ParamDefaultValue>CCMAdministrator</ParamDefaultValue>
+    <ParamValue>ccmadmin</ParamValue>
+  </ApplUserUsername>
+  <ApplUserPwCrypt>
+    <ParamNameText>Application User Password</ParamNameText>
+    <ParamDefaultValue>password</ParamDefaultValue>
+    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+  </ApplUserPwCrypt>
+</PlatformData>

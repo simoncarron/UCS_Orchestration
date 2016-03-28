@@ -11,6 +11,6 @@ app.run(
 
     	debug=config.DEBUG,
     	host="0.0.0.0",
-    	port=int("800"),
+    	port=int("5000"),
 	use_reloader=False
 )

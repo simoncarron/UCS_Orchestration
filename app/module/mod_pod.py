@@ -1,4 +1,4 @@
-from flask import session
+from flask import session, send_file
 
 from Exscript.protocols import SSH2
 from Exscript import Account
@@ -250,3 +250,8 @@ def updatePod():
             db.commit()
 
             return redirect(url_for('pod_blueprint.showPod'))
+
+@pod_blueprint.route('/return-files/<file>')
+def return_files_tut(file):
+    print file
+    return send_file('temp/07/'+file, attachment_filename=file)
