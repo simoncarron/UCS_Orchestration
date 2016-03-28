@@ -6,6 +6,9 @@ if __name__ == "__main__":
     app.config['SESSION_TYPE'] = 'filesystem'
 
 print "test"
+
+print "test2"
+
 app.run(
 
     	debug=config.DEBUG,
