@@ -5,15 +5,6 @@ if __name__ == "__main__":
     app.secret_key = 'super secret key'
     app.config['SESSION_TYPE'] = 'filesystem'
 
-print "test"
-
-print "test2"
-
-print "dfdfdff"
-
-print "dfdfdf"
-
-print "gggggggg"
 
 
 app.run(
