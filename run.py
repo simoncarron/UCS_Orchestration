@@ -9,6 +9,9 @@ print "test"
 
 print "test2"
 
+print "dfdfdff"
+
+
 app.run(
 
     	debug=config.DEBUG,
