@@ -255,3 +255,8 @@ def updatePod():
 def return_files_tut(file):
     print file
     return send_file('temp/07/'+file, attachment_filename=file)
+
+@pod_blueprint.route('/platformConfig/', methods=['GET'])
+def platformConfig():
+    print (database.getEntrie121("vm","1"))
+    return render_template('pod/platformConfig.xml')

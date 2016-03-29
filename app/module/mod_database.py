@@ -178,6 +178,14 @@ def getEntrie(table, pkID):
 
     return entries
 
+def getEntrie121(table, pkID):
+    db = getDataBase()
+    db.row_factory = dict_factory
+    cur = db.execute('select * from ' + table + ' where pkID like "' + pkID + '"')
+    entries = cur.fetchall()
+
+    return entries
+
 def getEntrieRequest(table, colum, value):
     db = getDataBase()
     cur = db.execute('select * from ' + table + ' where '+colum+' like "' + value + '"')
