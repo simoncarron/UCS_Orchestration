@@ -29,42 +29,27 @@
   <LocalHostName>
     <ParamNameText>Host Name for this machine</ParamNameText>
     <ParamDefaultValue>localhost</ParamDefaultValue>
-    <ParamValue>cucm02</ParamValue>
+    <ParamValue>sdfsfsfsf</ParamValue>
   </LocalHostName>
   <LocalHostDHCP>
     <ParamNameText>Is DHCP enabled for this machine</ParamNameText>
     <ParamDefaultValue>no</ParamDefaultValue>
-    <ParamValue>no</ParamValue>
+    <ParamValue>yes</ParamValue>
   </LocalHostDHCP>
-  <LocalHostIP0>
-    <ParamNameText>Host IP0 addr for this node</ParamNameText>
-    <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
-    <ParamValue>192.168.5.1</ParamValue>
-  </LocalHostIP0>
-  <LocalHostMask0>
-    <ParamNameText>Host IP0 mask for this node</ParamNameText>
-    <ParamDefaultValue>255.255.255.0</ParamDefaultValue>
-    <ParamValue>255.255.255.0</ParamValue>
-  </LocalHostMask0>
-  <LocalHostGW0>
-    <ParamNameText>Gateway for this node</ParamNameText>
-    <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
-    <ParamValue>192.168.5.3</ParamValue>
-  </LocalHostGW0>
   <LocalHostTimezone>
     <ParamNameText>Timezone for this node</ParamNameText>
     <ParamDefaultValue>America/Los_Angeles</ParamDefaultValue>
-    <ParamValue>Europe/Brussels</ParamValue>
+    <ParamValue>Africa/Abidjan</ParamValue>
   </LocalHostTimezone>
   <LocalHostContinent>
     <ParamNameText>Continent for this node</ParamNameText>
     <ParamDefaultValue>America</ParamDefaultValue>
-    <ParamValue>Europe</ParamValue>
+    <ParamValue>Africa</ParamValue>
   </LocalHostContinent>
   <LocalHostCity>
     <ParamNameText>City for this node</ParamNameText>
     <ParamDefaultValue>Los_Angeles</ParamDefaultValue>
-    <ParamValue>Brussels</ParamValue>
+    <ParamValue>Abidjan</ParamValue>
   </LocalHostCity>
   <LocalHostAdminName>
     <ParamNameText>Administrator name for this node</ParamNameText>
@@ -74,33 +59,33 @@
   <LocalHostAdminPwCrypt>
     <ParamNameText>Admin PW for this node</ParamNameText>
     <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    <ParamValue>08CDA5D92CB0ED9B831812812AB2825C831812812AB2825C831812812AB2825C</ParamValue>
   </LocalHostAdminPwCrypt>
   <CertX509>
     <Org>
       <ParamNameText>Certification Signing Request Organization</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_Organization</ParamValue>
+      <ParamValue>vd</ParamValue>
     </Org>
     <Unit>
       <ParamNameText>Certification Signing Request Unit</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_Unit</ParamValue>
+      <ParamValue>vd</ParamValue>
     </Unit>
     <Location>
       <ParamNameText>Certification Signing Request Location</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_Location</ParamValue>
+      <ParamValue>vd</ParamValue>
     </Location>
     <State>
       <ParamNameText>Certification Signing Request State</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_State</ParamValue>
+      <ParamValue>vd</ParamValue>
     </State>
     <Country>
       <ParamNameText>Certification Signing Request Country</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>CH</ParamValue>
+      <ParamValue>US</ParamValue>
     </Country>
   </CertX509>
   <LocaleId>
@@ -126,7 +111,7 @@
   <SftpPwCrypt>
     <ParamNameText>Security PW for this node</ParamNameText>
     <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    <ParamValue>08CDA5D92CB0ED9B831812812AB2825C831812812AB2825C831812812AB2825C</ParamValue>
   </SftpPwCrypt>
   <IPSecFirstNode>
     <ParamNameText>First IPSec node in the cluster</ParamNameText>
@@ -141,37 +126,37 @@
   <IPSecSecurityPwCrypt>
     <ParamNameText>Security PW for this node</ParamNameText>
     <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    <ParamValue>08CDA5D92CB0ED9B831812812AB2825C831812812AB2825C831812812AB2825C</ParamValue>
   </IPSecSecurityPwCrypt>
   <CcmDBHost>
     <ParamNameText>Host Name for DataBase</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>simonhostname</ParamValue>
+    <ParamValue>sfsfdfsfs</ParamValue>
   </CcmDBHost>
   <CcmDBIpAddr>
     <ParamNameText>Host IP Addr for DataBase</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>192.168.1.1</ParamValue>
+    <ParamValue>2.2.2.2</ParamValue>
   </CcmDBIpAddr>
   <IPSecMasterHost>
     <ParamNameText>Host name for IPSec</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>simonhostname</ParamValue>
+    <ParamValue>sfsfdfsfs</ParamValue>
   </IPSecMasterHost>
   <IPSecMasterIpAddr>
     <ParamNameText>Host IP Addr for IPSec</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>192.168.1.1</ParamValue>
+    <ParamValue>2.2.2.2</ParamValue>
   </IPSecMasterIpAddr>
   <NTPServerHost>
     <ParamNameText>Cluster NTP Server Host name</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>simonhostname</ParamValue>
+    <ParamValue>sfsfdfsfs</ParamValue>
   </NTPServerHost>
   <NTPServerIpAddr>
     <ParamNameText>Cluster NTP Server Host IP Addr</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>192.168.1.1</ParamValue>
+    <ParamValue>2.2.2.2</ParamValue>
   </NTPServerIpAddr>
   <ApplUserUsername>
     <ParamNameText>Application User Username</ParamNameText>
@@ -181,6 +166,6 @@
   <ApplUserPwCrypt>
     <ParamNameText>Application User Password</ParamNameText>
     <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    <ParamValue>08CDA5D92CB0ED9B831812812AB2825C831812812AB2825C831812812AB2825C</ParamValue>
   </ApplUserPwCrypt>
 </PlatformData>

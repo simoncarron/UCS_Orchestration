@@ -11,6 +11,13 @@
                 <value name="Cisco Unity Connection"/>
                 <value name="Cisco Unified Communications Manager IM &amp; Presence "/>
             </element>
+            <element type="radio" editable="yes" empty="no">
+                <name>is_primary</name>
+                <display_name>Publisher</display_name>
+                <message>No possible</message>
+                <value name="Yes"/>
+                <value name="No"/>
+            </element>
         </sub>
         <sub name="Network Information">
             <element type="text" editable="yes" empty="no">

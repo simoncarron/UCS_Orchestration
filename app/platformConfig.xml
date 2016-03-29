@@ -29,6 +29,9 @@
   <LocalHostName>
     <ParamNameText>Host Name for this machine</ParamNameText>
     <ParamDefaultValue>localhost</ParamDefaultValue>
+<!-- ******************** -->
+<!--     Host Name        -->
+<!-- ******************** -->
     <ParamValue>cucm03</ParamValue>
   </LocalHostName>
   <LocalHostDHCP>
@@ -39,31 +42,49 @@
   <LocalHostIP0>
     <ParamNameText>Host IP0 addr for this node</ParamNameText>
     <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
+<!-- *********************-->
+<!--     IP Address       -->
+<!-- ******************** -->
     <ParamValue>192.168.6.1</ParamValue>
   </LocalHostIP0>
   <LocalHostMask0>
     <ParamNameText>Host IP0 mask for this node</ParamNameText>
     <ParamDefaultValue>255.255.255.0</ParamDefaultValue>
+<!-- ******************** -->
+<!--  IP Mask Address     -->
+<!-- ******************** -->
     <ParamValue>255.255.255.0</ParamValue>
   </LocalHostMask0>
   <LocalHostGW0>
     <ParamNameText>Gateway for this node</ParamNameText>
     <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
+<!-- ******************** -->
+<!--   IP Default GW      -->
+<!-- ******************** -->
     <ParamValue>192.168.6.3</ParamValue>
   </LocalHostGW0>
   <LocalHostTimezone>
     <ParamNameText>Timezone for this node</ParamNameText>
     <ParamDefaultValue>America/Los_Angeles</ParamDefaultValue>
+<!-- ******************** -->
+<!--     Time Zone        -->
+<!-- ******************** -->
     <ParamValue>Europe/Brussels</ParamValue>
   </LocalHostTimezone>
   <LocalHostContinent>
     <ParamNameText>Continent for this node</ParamNameText>
     <ParamDefaultValue>America</ParamDefaultValue>
+<!-- ******************** -->
+<!--     Continent        -->
+<!-- ******************** -->
     <ParamValue>Europe</ParamValue>
   </LocalHostContinent>
   <LocalHostCity>
     <ParamNameText>City for this node</ParamNameText>
     <ParamDefaultValue>Los_Angeles</ParamDefaultValue>
+<!-- ******************** -->
+<!--       City           -->
+<!-- ******************** -->
     <ParamValue>Brussels</ParamValue>
   </LocalHostCity>
   <LocalHostAdminName>
@@ -80,27 +101,27 @@
     <Org>
       <ParamNameText>Certification Signing Request Organization</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_Organization</ParamValue>
+      <ParamValue>none</ParamValue>
     </Org>
     <Unit>
       <ParamNameText>Certification Signing Request Unit</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_Unit</ParamValue>
+      <ParamValue>none</ParamValue>
     </Unit>
     <Location>
       <ParamNameText>Certification Signing Request Location</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_Location</ParamValue>
+      <ParamValue>none</ParamValue>
     </Location>
     <State>
       <ParamNameText>Certification Signing Request State</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>Simon_State</ParamValue>
+      <ParamValue>none</ParamValue>
     </State>
     <Country>
       <ParamNameText>Certification Signing Request Country</ParamNameText>
       <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>CH</ParamValue>
+      <ParamValue>none</ParamValue>
     </Country>
   </CertX509>
   <LocaleId>
@@ -116,6 +137,9 @@
   <CcmFirstNode>
     <ParamNameText>First CCM node in the cluster</ParamNameText>
     <ParamDefaultValue>yes</ParamDefaultValue>
+<!-- ******************** -->
+<!--      Is Pub?         -->
+<!-- ******************** -->
     <ParamValue>no</ParamValue>
   </CcmFirstNode>
   <CallHomeDisable>
@@ -131,6 +155,9 @@
   <IPSecFirstNode>
     <ParamNameText>First IPSec node in the cluster</ParamNameText>
     <ParamDefaultValue>yes</ParamDefaultValue>
+<!-- ******************** -->
+<!--      Is Pub?         -->
+<!-- ******************** -->
     <ParamValue>no</ParamValue>
   </IPSecFirstNode>
   <IPSecEnabled>
@@ -146,6 +173,9 @@
   <CcmDBHost>
     <ParamNameText>Host Name for DataBase</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
+<!-- ******************** -->
+<!--     Host Name        -->
+<!-- ******************** -->
     <ParamValue>simonhostname</ParamValue>
   </CcmDBHost>
   <CcmDBIpAddr>
@@ -156,6 +186,9 @@
   <IPSecMasterHost>
     <ParamNameText>Host name for IPSec</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
+<!-- ******************** -->
+<!--     Host Name        -->
+<!-- ******************** -->
     <ParamValue>simonhostname</ParamValue>
   </IPSecMasterHost>
   <IPSecMasterIpAddr>
@@ -166,6 +199,9 @@
   <NTPServerHost>
     <ParamNameText>Cluster NTP Server Host name</ParamNameText>
     <ParamDefaultValue>none</ParamDefaultValue>
+<!-- ******************** -->
+<!--     Host Name        -->
+<!-- ******************** -->
     <ParamValue>simonhostname</ParamValue>
   </NTPServerHost>
   <NTPServerIpAddr>

@@ -2,6 +2,7 @@ drop table if exists vm;
 create table vm (
   pkID integer primary key autoincrement
   ,product text
+  ,is_primary text
   ,name text
   ,ip_address text
   ,ip_mask text
