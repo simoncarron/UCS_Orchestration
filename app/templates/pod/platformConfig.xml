@@ -1,271 +1,294 @@
 <?xml version="1.0"?>
 <PlatformData>
-  <Version>11.0.1</Version>
-  <!--     Pub/Sub        -->
-  <ProductDeployment>
-    <ParamNameText>Deployment</ParamNameText>
-    <ParamDefaultValue>CallManager</ParamDefaultValue>
-    <ParamValue>callmanager</ParamValue>
-  </ProductDeployment>
-  <!--     Pub/Sub        -->
-  <PlatformConfigurationDone>
-    <ParamNameText>Status of platform configuration</ParamNameText>
-    <ParamDefaultValue>no</ParamDefaultValue>
-    <ParamValue>no</ParamValue>
-  </PlatformConfigurationDone>
-  <!--     Pub/Sub        -->
-  <PreLoadedSoftware>
-    <ParamNameText>Create a pre loaded software node</ParamNameText>
-    <ParamDefaultValue>no</ParamDefaultValue>
-    <ParamValue>yes</ParamValue>
-  </PreLoadedSoftware>
-  <!--     Pub/Sub        -->
-  <InstallType>
-    <ParamNameText>Install or upgrade type</ParamNameText>
-    <ParamDefaultValue>basic</ParamDefaultValue>
-    <ParamValue>Basic Install</ParamValue>
-  </InstallType>
-  <!--     Pub/Sub        -->
-  <LocalHostNICAuto>
-    <ParamNameText>Auto Configure speed and duplex</ParamNameText>
-    <ParamDefaultValue>yes</ParamDefaultValue>
-    <ParamValue>yes</ParamValue>
-  </LocalHostNICAuto>
-  <!--     Pub/Sub        -->
-  <LocalHostName>
-    <ParamNameText>Host Name for this machine</ParamNameText>
-    <ParamDefaultValue>localhost</ParamDefaultValue>
-<!-- ******************** -->
-<!--     Host Name        -->
-<!-- ******************** -->
-    <ParamValue>cucm03</ParamValue>
-  </LocalHostName>
-  <!--     Pub/Sub        -->
-  <LocalHostDHCP>
-    <ParamNameText>Is DHCP enabled for this machine</ParamNameText>
-    <ParamDefaultValue>no</ParamDefaultValue>
-    <ParamValue>no</ParamValue>
-  </LocalHostDHCP>
-  <!--     Pub/Sub        -->
-  <LocalHostIP0>
-    <ParamNameText>Host IP0 addr for this node</ParamNameText>
-    <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
-<!-- *********************-->
-<!--     IP Address       -->
-<!-- ******************** -->
-    <ParamValue>192.168.6.1</ParamValue>
-  </LocalHostIP0>
-  <!--     Pub/Sub        -->
-  <LocalHostMask0>
-    <ParamNameText>Host IP0 mask for this node</ParamNameText>
-    <ParamDefaultValue>255.255.255.0</ParamDefaultValue>
-<!-- ******************** -->
-<!--  IP Mask Address     -->
-<!-- ******************** -->
-    <ParamValue>255.255.255.0</ParamValue>
-  </LocalHostMask0>
-  <!--     Pub/Sub        -->
-  <LocalHostGW0>
-    <ParamNameText>Gateway for this node</ParamNameText>
-    <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
-<!-- ******************** -->
-<!--   IP Default GW      -->
-<!-- ******************** -->
-    <ParamValue>192.168.6.3</ParamValue>
-  </LocalHostGW0>
-  <!--     Pub/Sub        -->
-  <LocalHostTimezone>
-    <ParamNameText>Timezone for this node</ParamNameText>
-    <ParamDefaultValue>America/Los_Angeles</ParamDefaultValue>
-<!-- ******************** -->
-<!--     Time Zone        -->
-<!-- ******************** -->
-    <ParamValue>Europe/Brussels</ParamValue>
-  </LocalHostTimezone>
-  <!--     Pub/Sub        -->
-  <LocalHostContinent>
-    <ParamNameText>Continent for this node</ParamNameText>
-    <ParamDefaultValue>America</ParamDefaultValue>
-<!-- ******************** -->
-<!--     Continent        -->
-<!-- ******************** -->
-    <ParamValue>Europe</ParamValue>
-  </LocalHostContinent>
-  <!--     Pub/Sub        -->
-  <LocalHostCity>
-    <ParamNameText>City for this node</ParamNameText>
-    <ParamDefaultValue>Los_Angeles</ParamDefaultValue>
-<!-- ******************** -->
-<!--       City           -->
-<!-- ******************** -->
-    <ParamValue>Brussels</ParamValue>
-  </LocalHostCity>
-  <!--     Pub/Sub        -->
-  <LocalHostAdminName>
-    <ParamNameText>Administrator name for this node</ParamNameText>
-    <ParamDefaultValue>administrator</ParamDefaultValue>
-    <ParamValue>ccmadmin</ParamValue>
-  </LocalHostAdminName>
-  <!--     Pub/Sub        -->
-  <LocalHostAdminPwCrypt>
-    <ParamNameText>Admin PW for this node</ParamNameText>
-    <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
-  </LocalHostAdminPwCrypt>
-  <!--     Pub/Sub        -->
-  <CertX509>
+    <Version>11.0.1</Version>
     <!--     Pub/Sub        -->
-    <Org>
-      <ParamNameText>Certification Signing Request Organization</ParamNameText>
-      <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>none</ParamValue>
-    </Org>
+    <ProductDeployment>
+        <ParamNameText>Deployment</ParamNameText>
+        <ParamDefaultValue>CallManager</ParamDefaultValue>
+        <ParamValue>callmanager</ParamValue>
+    </ProductDeployment>
     <!--     Pub/Sub        -->
-    <Unit>
-      <ParamNameText>Certification Signing Request Unit</ParamNameText>
-      <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>none</ParamValue>
-    </Unit>
+    <PlatformConfigurationDone>
+        <ParamNameText>Status of platform configuration</ParamNameText>
+        <ParamDefaultValue>no</ParamDefaultValue>
+        <ParamValue>no</ParamValue>
+    </PlatformConfigurationDone>
     <!--     Pub/Sub        -->
-    <Location>
-      <ParamNameText>Certification Signing Request Location</ParamNameText>
-      <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>none</ParamValue>
-    </Location>
+    <PreLoadedSoftware>
+        <ParamNameText>Create a pre loaded software node</ParamNameText>
+        <ParamDefaultValue>no</ParamDefaultValue>
+        <ParamValue>yes</ParamValue>
+    </PreLoadedSoftware>
     <!--     Pub/Sub        -->
-    <State>
-      <ParamNameText>Certification Signing Request State</ParamNameText>
-      <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>none</ParamValue>
-    </State>
+    <InstallType>
+        <ParamNameText>Install or upgrade type</ParamNameText>
+        <ParamDefaultValue>basic</ParamDefaultValue>
+        <ParamValue>Basic Install</ParamValue>
+    </InstallType>
     <!--     Pub/Sub        -->
-    <Country>
-      <ParamNameText>Certification Signing Request Country</ParamNameText>
-      <ParamDefaultValue>none</ParamDefaultValue>
-      <ParamValue>none</ParamValue>
-    </Country>
-  </CertX509>
-  <!--     Pub/Sub        -->
-  <LocaleId>
-    <ParamNameText>Microsoft assigned locale identifier value</ParamNameText>
-    <ParamDefaultValue>00000409</ParamDefaultValue>
-    <ParamValue/>
-  </LocaleId>
-  <!--     Pub/Sub        -->
-  <CCMVersion>
-    <ParamNameText>CM version on the server backed up</ParamNameText>
-    <ParamDefaultValue>CCM ver 5.0</ParamDefaultValue>
-    <ParamValue/>
-  </CCMVersion>
-  <!--     Pub/Sub        -->
-  <CcmFirstNode>
-    <ParamNameText>First CCM node in the cluster</ParamNameText>
-    <ParamDefaultValue>yes</ParamDefaultValue>
-<!-- ******************** -->
-<!--      Is Pub?         -->
-<!-- ******************** -->
-    <ParamValue>no</ParamValue>
-  </CcmFirstNode>
-  <!--     Pub/Sub        -->
-  <CallHomeDisable>
-    <ParamNameText>This tag will be present when SCH and ACH is disabled by the user</ParamNameText>
-    <ParamDefaultValue>Disable</ParamDefaultValue>
-    <ParamValue>Disabled</ParamValue>
-  </CallHomeDisable>
-  <!--     Pub/Sub        -->
-  <SftpPwCrypt>
-    <ParamNameText>Security PW for this node</ParamNameText>
-    <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
-  </SftpPwCrypt>
-  <!--     Pub/Sub        -->
-  <IPSecFirstNode>
-    <ParamNameText>First IPSec node in the cluster</ParamNameText>
-    <ParamDefaultValue>yes</ParamDefaultValue>
-<!-- ******************** -->
-<!--      Is Pub?         -->
-<!-- ******************** -->
-    <ParamValue>no</ParamValue>
-  </IPSecFirstNode>
-  <!--     Pub/Sub        -->
-  <IPSecEnabled>
-    <ParamNameText>IPSec Configuration for this node</ParamNameText>
-    <ParamDefaultValue>no</ParamDefaultValue>
-    <ParamValue>no</ParamValue>
-  </IPSecEnabled>
-  <!--     Pub/Sub        -->
-  <IPSecSecurityPwCrypt>
-    <ParamNameText>Security PW for this node</ParamNameText>
-    <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
-  </IPSecSecurityPwCrypt>
-  <!--     Sub        -->
-  <CcmDBHost>
-    <ParamNameText>Host Name for DataBase</ParamNameText>
-    <ParamDefaultValue>none</ParamDefaultValue>
-<!-- ******************** -->
-<!--     Host Name        -->
-<!-- ******************** -->
-    <ParamValue>simonhostname</ParamValue>
-  </CcmDBHost>
-  <!--     Sub        -->
-  <CcmDBIpAddr>
-    <ParamNameText>Host IP Addr for DataBase</ParamNameText>
-    <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>192.168.1.1</ParamValue>
-  </CcmDBIpAddr>
-  <!--     Sub        -->
-  <IPSecMasterHost>
-    <ParamNameText>Host name for IPSec</ParamNameText>
-    <ParamDefaultValue>none</ParamDefaultValue>
-<!-- ******************** -->
-<!--     Host Name        -->
-<!-- ******************** -->
-    <ParamValue>simonhostname</ParamValue>
-  </IPSecMasterHost>
-  <!--     Sub        -->
-  <IPSecMasterIpAddr>
-    <ParamNameText>Host IP Addr for IPSec</ParamNameText>
-    <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>192.168.1.1</ParamValue>
-  </IPSecMasterIpAddr>
-  <!--     Sub        -->
-  <NTPServerHost>
-    <ParamNameText>Cluster NTP Server Host name</ParamNameText>
-    <ParamDefaultValue>none</ParamDefaultValue>
-<!-- ******************** -->
-<!--     Host Name        -->
-<!-- ******************** -->
-    <ParamValue>simonhostname</ParamValue>
-  </NTPServerHost>
-  <!--     Sub        -->
-  <NTPServerIpAddr>
-    <ParamNameText>Cluster NTP Server Host IP Addr</ParamNameText>
-    <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>192.168.1.1</ParamValue>
-  </NTPServerIpAddr>
-  <!--     Pub        -->
-  <NtpServer>
-    <ParamNameText>Address Range for NTP server</ParamNameText>
-    <ParamDefaultValue>none</ParamDefaultValue>
-    <ParamValue>1.1.1.1</ParamValue>
-  </NtpServer>
-  <!--     Pub        -->
-  <PostInstallAutoRegister>
-    <ParamNameText>Number of Hours to Enable Auto Register Post-Install on Pub</ParamNameText>
-    <ParamDefaultValue>24</ParamDefaultValue>
-    <ParamValue>24</ParamValue>
-  </PostInstallAutoRegister>
-  <!--     Pub/Sub        -->
-  <ApplUserUsername>
-    <ParamNameText>Application User Username</ParamNameText>
-    <ParamDefaultValue>CCMAdministrator</ParamDefaultValue>
-    <ParamValue>ccmadmin</ParamValue>
-  </ApplUserUsername>
-  <!--     Pub/Sub        -->
-  <ApplUserPwCrypt>
-    <ParamNameText>Application User Password</ParamNameText>
-    <ParamDefaultValue>password</ParamDefaultValue>
-    <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
-  </ApplUserPwCrypt>
+    <LocalHostNICAuto>
+        <ParamNameText>Auto Configure speed and duplex</ParamNameText>
+        <ParamDefaultValue>yes</ParamDefaultValue>
+        <ParamValue>yes</ParamValue>
+    </LocalHostNICAuto>
+    <!--     Pub/Sub        -->
+    <LocalHostName>
+        <ParamNameText>Host Name for this machine</ParamNameText>
+        <ParamDefaultValue>localhost</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--     Host Name        -->
+        <!-- ******************** -->
+        <ParamValue>{{entry[0].name}}</ParamValue>
+    </LocalHostName>
+    <!--     Pub/Sub        -->
+    <LocalHostDHCP>
+        <ParamNameText>Is DHCP enabled for this machine</ParamNameText>
+        <ParamDefaultValue>no</ParamDefaultValue>
+        <ParamValue>no</ParamValue>
+    </LocalHostDHCP>
+    <!--     Pub/Sub        -->
+    <LocalHostIP0>
+        <ParamNameText>Host IP0 addr for this node</ParamNameText>
+        <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
+        <!-- *********************-->
+        <!--     IP Address       -->
+        <!-- ******************** -->
+        <ParamValue>{{entry[0].ip_address}}</ParamValue>
+    </LocalHostIP0>
+    <!--     Pub/Sub        -->
+    <LocalHostMask0>
+        <ParamNameText>Host IP0 mask for this node</ParamNameText>
+        <ParamDefaultValue>255.255.255.0</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--  IP Mask Address     -->
+        <!-- ******************** -->
+        <ParamValue>{{entry[0].ip_mask}}</ParamValue>
+    </LocalHostMask0>
+    <!--     Pub/Sub        -->
+    <LocalHostGW0>
+        <ParamNameText>Gateway for this node</ParamNameText>
+        <ParamDefaultValue>127.0.0.1</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--   IP Default GW      -->
+        <!-- ******************** -->
+        <ParamValue>{{entry[0].ip_gateway_address}}</ParamValue>
+    </LocalHostGW0>
+    <!--     Pub/Sub        -->
+    <LocalHostDnsPrimary>
+        <ParamNameText>Primary DNS server IP address</ParamNameText>
+        <ParamDefaultValue>0.0.0.0</ParamDefaultValue>
+        <ParamValue>{{entry[0].primary_dns}}</ParamValue>
+    </LocalHostDnsPrimary>
+    <!--     Pub/Sub        -->
+    <LocalHostDnsSecondary>
+        <ParamNameText>Secondary DNS server IP address</ParamNameText>
+        <ParamDefaultValue>0.0.0.0</ParamDefaultValue>
+        <ParamValue>{{entry[0].secondary_dns}}</ParamValue>
+    </LocalHostDnsSecondary>
+    <!--     Pub/Sub        -->
+    <LocalHostDomain>
+        <ParamNameText>Domain name for this machine</ParamNameText>
+        <ParamDefaultValue>cisco.com</ParamDefaultValue>
+        <ParamValue>{{entry[0].domain}}</ParamValue>
+    </LocalHostDomain>
+    <!--     Pub/Sub        -->
+    <LocalHostTimezone>
+        <ParamNameText>Timezone for this node</ParamNameText>
+        <ParamDefaultValue>America/Los_Angeles</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--     Time Zone        -->
+        <!-- ******************** -->
+        <ParamValue>{{entry[0].time_zone}}</ParamValue>
+    </LocalHostTimezone>
+    <!--     Pub/Sub        -->
+    <LocalHostContinent>
+        <ParamNameText>Continent for this node</ParamNameText>
+        <ParamDefaultValue>America</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--     Continent        -->
+        <!-- ******************** -->
+        <ParamValue>{{entry[0].region}}</ParamValue>
+    </LocalHostContinent>
+    <!--     Pub/Sub        -->
+    <LocalHostCity>
+        <ParamNameText>City for this node</ParamNameText>
+        <ParamDefaultValue>Los_Angeles</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--       City           -->
+        <!-- ******************** -->
+        <ParamValue>Brussels</ParamValue>
+    </LocalHostCity>
+    <!--     Pub/Sub        -->
+    <LocalHostAdminName>
+        <ParamNameText>Administrator name for this node</ParamNameText>
+        <ParamDefaultValue>administrator</ParamDefaultValue>
+        <ParamValue>ccmadmin</ParamValue>
+    </LocalHostAdminName>
+    <!--     Pub/Sub        -->
+    <LocalHostAdminPwCrypt>
+        <ParamNameText>Admin PW for this node</ParamNameText>
+        <ParamDefaultValue>password</ParamDefaultValue>
+        <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    </LocalHostAdminPwCrypt>
+    <!--     Pub/Sub        -->
+    <CertX509>
+        <!--     Pub/Sub        -->
+        <Org>
+            <ParamNameText>Certification Signing Request Organization</ParamNameText>
+            <ParamDefaultValue>none</ParamDefaultValue>
+            <ParamValue>none</ParamValue>
+        </Org>
+        <!--     Pub/Sub        -->
+        <Unit>
+            <ParamNameText>Certification Signing Request Unit</ParamNameText>
+            <ParamDefaultValue>none</ParamDefaultValue>
+            <ParamValue>none</ParamValue>
+        </Unit>
+        <!--     Pub/Sub        -->
+        <Location>
+            <ParamNameText>Certification Signing Request Location</ParamNameText>
+            <ParamDefaultValue>none</ParamDefaultValue>
+            <ParamValue>none</ParamValue>
+        </Location>
+        <!--     Pub/Sub        -->
+        <State>
+            <ParamNameText>Certification Signing Request State</ParamNameText>
+            <ParamDefaultValue>none</ParamDefaultValue>
+            <ParamValue>none</ParamValue>
+        </State>
+        <!--     Pub/Sub        -->
+        <Country>
+            <ParamNameText>Certification Signing Request Country</ParamNameText>
+            <ParamDefaultValue>none</ParamDefaultValue>
+            <ParamValue>none</ParamValue>
+        </Country>
+    </CertX509>
+    <!--     Pub/Sub        -->
+    <LocaleId>
+        <ParamNameText>Microsoft assigned locale identifier value</ParamNameText>
+        <ParamDefaultValue>00000409</ParamDefaultValue>
+        <ParamValue/>
+    </LocaleId>
+    <!--     Pub/Sub        -->
+    <CCMVersion>
+        <ParamNameText>CM version on the server backed up</ParamNameText>
+        <ParamDefaultValue>CCM ver 5.0</ParamDefaultValue>
+        <ParamValue/>
+    </CCMVersion>
+    <!--     Pub/Sub        -->
+    <CcmFirstNode>
+        <ParamNameText>First CCM node in the cluster</ParamNameText>
+        <ParamDefaultValue>yes</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--      Is Pub?         -->
+        <!-- ******************** -->
+        <ParamValue>{%if entry[0].is_primary == "No"%}no{% else %}yes{%endif%}</ParamValue>
+    </CcmFirstNode>
+    <!--     Pub/Sub        -->
+    <CallHomeDisable>
+        <ParamNameText>This tag will be present when SCH and ACH is disabled by the user</ParamNameText>
+        <ParamDefaultValue>Disable</ParamDefaultValue>
+        <ParamValue>Disabled</ParamValue>
+    </CallHomeDisable>
+    <!--     Pub/Sub        -->
+    <SftpPwCrypt>
+        <ParamNameText>Security PW for this node</ParamNameText>
+        <ParamDefaultValue>password</ParamDefaultValue>
+        <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    </SftpPwCrypt>
+    <!--     Pub/Sub        -->
+    <IPSecFirstNode>
+        <ParamNameText>First IPSec node in the cluster</ParamNameText>
+        <ParamDefaultValue>yes</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--      Is Pub?         -->
+        <!-- ******************** -->
+        <ParamValue>{%if entry[0].is_primary == "No"%}no{% else %}yes{%endif%}</ParamValue>
+    </IPSecFirstNode>
+    <!--     Pub/Sub        -->
+    <IPSecEnabled>
+        <ParamNameText>IPSec Configuration for this node</ParamNameText>
+        <ParamDefaultValue>no</ParamDefaultValue>
+        <ParamValue>no</ParamValue>
+    </IPSecEnabled>
+    <!--     Pub/Sub        -->
+    <IPSecSecurityPwCrypt>
+        <ParamNameText>Security PW for this node</ParamNameText>
+        <ParamDefaultValue>password</ParamDefaultValue>
+        <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    </IPSecSecurityPwCrypt>
+    {%if entry[0].is_primary == "No"%}
+
+    <!--     Sub        -->
+    <CcmDBHost>
+        <ParamNameText>Host Name for DataBase</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--     Host Name        -->
+        <!-- ******************** -->
+        <ParamValue>simonhostname</ParamValue>
+    </CcmDBHost>
+    <!--     Sub        -->
+    <CcmDBIpAddr>
+        <ParamNameText>Host IP Addr for DataBase</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <ParamValue>192.168.1.1</ParamValue>
+    </CcmDBIpAddr>
+    <!--     Sub        -->
+    <IPSecMasterHost>
+        <ParamNameText>Host name for IPSec</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--     Host Name        -->
+        <!-- ******************** -->
+        <ParamValue>simonhostname</ParamValue>
+    </IPSecMasterHost>
+    <!--     Sub        -->
+    <IPSecMasterIpAddr>
+        <ParamNameText>Host IP Addr for IPSec</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <ParamValue>192.168.1.1</ParamValue>
+    </IPSecMasterIpAddr>
+    <!--     Sub        -->
+    <NTPServerHost>
+        <ParamNameText>Cluster NTP Server Host name</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <!-- ******************** -->
+        <!--     Host Name        -->
+        <!-- ******************** -->
+        <ParamValue>simonhostname</ParamValue>
+    </NTPServerHost>
+    <!--     Sub        -->
+    <NTPServerIpAddr>
+        <ParamNameText>Cluster NTP Server Host IP Addr</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <ParamValue>192.168.1.1</ParamValue>
+    </NTPServerIpAddr>
+    {% endif%}
+    {%if entry[0].is_primary == "Yes"%}
+    <!--     Pub        -->
+    <NtpServer>
+        <ParamNameText>Address Range for NTP server</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <ParamValue>{{entry[0].region}}</ParamValue>
+    </NtpServer>
+    <!--     Pub        -->
+    <PostInstallAutoRegister>
+        <ParamNameText>Number of Hours to Enable Auto Register Post-Install on Pub</ParamNameText>
+        <ParamDefaultValue>24</ParamDefaultValue>
+        <ParamValue>24</ParamValue>
+    </PostInstallAutoRegister>
+    {%endif%}
+    <!--     Pub/Sub        -->
+    <ApplUserUsername>
+        <ParamNameText>Application User Username</ParamNameText>
+        <ParamDefaultValue>CCMAdministrator</ParamDefaultValue>
+        <ParamValue>ccmadmin</ParamValue>
+    </ApplUserUsername>
+    <!--     Pub/Sub        -->
+    <ApplUserPwCrypt>
+        <ParamNameText>Application User Password</ParamNameText>
+        <ParamDefaultValue>password</ParamDefaultValue>
+        <ParamValue>2F51BDB3520BD122DD87E1E9DDDD4EF4831812812AB2825C831812812AB2825C</ParamValue>
+    </ApplUserPwCrypt>
 </PlatformData>
