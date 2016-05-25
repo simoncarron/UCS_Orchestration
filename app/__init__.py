@@ -15,8 +15,8 @@ app = Flask(__name__)
 def index():
 
 
-    #database.createDataBaseSchema()
-    #database.createDataBase()
+    database.createDataBaseSchema()
+    database.createDataBase()
     if session.get('user'):
         return render_template('index.html', title="Home", user=session)
     else:

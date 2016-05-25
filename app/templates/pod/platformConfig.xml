@@ -160,7 +160,7 @@
         <Country>
             <ParamNameText>Certification Signing Request Country</ParamNameText>
             <ParamDefaultValue>none</ParamDefaultValue>
-            <ParamValue>none</ParamValue>
+            <ParamValue>CH</ParamValue>
         </Country>
     </CertX509>
     <!--     Pub/Sub        -->
@@ -270,7 +270,17 @@
     <NtpServer>
         <ParamNameText>Address Range for NTP server</ParamNameText>
         <ParamDefaultValue>none</ParamDefaultValue>
-        <ParamValue>{{entry[0].region}}</ParamValue>
+        <ParamValue>{{entry[0].ntp_server_1}}</ParamValue>
+    </NtpServer>
+    <NtpServer>
+        <ParamNameText>Address Range for NTP server</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <ParamValue>{{entry[0].ntp_server_2}}</ParamValue>
+    </NtpServer>
+    <NtpServer>
+        <ParamNameText>Address Range for NTP server</ParamNameText>
+        <ParamDefaultValue>none</ParamDefaultValue>
+        <ParamValue>{{entry[0].ntp_server_3}}</ParamValue>
     </NtpServer>
     <!--     Pub        -->
     <PostInstallAutoRegister>

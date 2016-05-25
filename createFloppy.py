@@ -1,7 +1,10 @@
 import os
+import app.module.mod_database as database
+
 
 
 def createFloppy(pod,nod,pub):
+
 
     os.popen("rm -rf app/temp")
 
@@ -11,7 +14,10 @@ def createFloppy(pod,nod,pub):
 
     os.popen("mkdir app/temp/"+pod)
 
-    os.popen("touch app/temp/"+pod+"/platformConfig.xml")
+    os.popen("wget http://localhost:5000/"+pod+"/platformConfig.xml")
+
+    os.popen("mv platformConfig.xml app/temp/"+pod+"/")
+
 
     if pub == True:
         os.popen("touch app/temp/"+pod+"/clusterConfig.xml")
@@ -28,4 +34,4 @@ def createFloppy(pod,nod,pub):
 
 
 
-createFloppy("07","cucm01",True)
+createFloppy("07","cucm01",False)
